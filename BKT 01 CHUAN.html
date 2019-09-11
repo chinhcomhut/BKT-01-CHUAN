@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BKT 01 CHUAN</title>
+</head>
+<body>
+<body>
+<table>
+    <tr>
+        <input type="text"id="input">
+        <button onclick="show()">Show</button>
+    </tr>
+</table>
+
+<script>
+    function checkprime(num) {
+        for (num; 2 <= num; num++) {
+            let check = true;
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    check = false;
+                    return;
+                }
+                if (check == true) {
+                    return true;
+                }
+            }
+        }
+    }
+    function show() {
+        let number= document.getElementById("input").value;
+        for (i=1;i<=number;i++){
+            if(checkprime(i)==true){
+                document.write(""+i+" ");
+            }
+        }
+    }
+</script>
+</body>
+</html>
